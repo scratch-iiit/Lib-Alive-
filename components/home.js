@@ -2,18 +2,21 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
 import react from 'react';
 import { Ionicons, FontAwesome, AntDesign, Entypo, SimpleLineIcons, MaterialCommunityIcons, Foundation, MaterialIcons, Feather, FontAwesome5 } from "@expo/vector-icons"
-
+import React from 'react';
 
 export default function Home({ navigation }) {
     return (
         <View style={{ backgroundColor: "white", flex: 1, paddingTop: 55, paddingHorizontal: 10 }}>
+
             <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
 
+                <View></View>
 
 
 
-                <View>
-                    <TouchableOpacity style={{ paddingLeft: 310 }}>
+
+                <View style={{ margin: 10 }}>
+                    <TouchableOpacity onPress={() => { navigation.navigate("books") }}>
                         <Text style={{ fontSize: 20, color: "#a6a6a6" }}>Skip</Text>
 
                     </TouchableOpacity>
@@ -70,7 +73,7 @@ export default function Home({ navigation }) {
             <View >
 
                 <TouchableOpacity onPress={() => { navigation.navigate("books") }} style={{
-                    backgroundColor: "black", borderRadius: 20, marginTop: 90, flexDirection: "row", width: 100, height: 60, marginLeft: 250, justifyContent: 'center'
+                    backgroundColor: "black", borderRadius: 20, marginTop: 70, flexDirection: "row", width: 100, height: 60, marginLeft: 250, justifyContent: 'center'
                 }}>
                     <Text style={{ fontSize: 24, color: 'white', paddingLeft: 25, paddingTop: 15, paddingRight: 25 }}>Next</Text>
                 </TouchableOpacity>
@@ -87,3 +90,7 @@ export default function Home({ navigation }) {
 
     )
 }
+
+
+
+

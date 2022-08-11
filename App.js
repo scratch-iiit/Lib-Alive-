@@ -6,9 +6,12 @@ import { createStackNavigator } from "@react-navigation/stack"
 import { NavigationContainer } from "@react-navigation/native"
 import Books from "./components/books"
 import Select from "./components/select"
+import React from 'react';
+import Blist from './components/blist'
 
 export default function App() {
   const MainNavigator = createStackNavigator();
+
   return (
     <View style={{ flex: 1 }}>
 
@@ -17,6 +20,7 @@ export default function App() {
           <MainNavigator.Screen name="home" component={Home} />
           <MainNavigator.Screen name="books" component={Books} />
           <MainNavigator.Screen name="select" component={Select} />
+          <MainNavigator.Screen name="blist" component={Blist} />
 
         </MainNavigator.Navigator>
       </NavigationContainer>
